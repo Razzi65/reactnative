@@ -5,7 +5,7 @@ const CounterApp = () => {
 
     return (
         <View>
-                <Inp
+                hello world
         </View>
     )
 }
