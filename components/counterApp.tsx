@@ -1,11 +1,17 @@
-import { View } from "react-native/types"
+import { Button, Text, TextInput, View } from "react-native"
+import UseCounter from "../custom hooks/useCounter"
 
 
 const CounterApp = () => {
 
+    const {setUserInput, userInput} = UseCounter()
+
     return (
         <View>
-                hello world
+                <TextInput value={userInput} onChangeText={setUserInput}/> 
+             <Text>
+             {userInput}     </Text>   
+               
         </View>
     )
 }

@@ -1,15 +1,17 @@
 import { View, Text } from "react-native"
+import CounterApp from "./components/counterApp"
 
 const app = () => {
 
   return (
     <View>
-<Text>
 
+    <CounterApp/>
+    <Text>
+      hi hello world
+    </Text>
 
-</Text>
-
-    </View>
+                   </View>
   )
 }
 
