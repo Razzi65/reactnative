@@ -15,12 +15,19 @@ const UseToDo = () => {
 
     const onPressHandler = () => {
         setUserToDo([...userToDo, addedToDo])
+        setUserInput("")
     }
 
+    const onDelHandler = (index) => {
+          const filtered = userToDo.filter((val, ind)=>index!=ind)  
+          setUserToDo(filtered)
+    }
+
+    
    
 
     return {
-        onPressHandler, userInput, setUserInput, userToDo
+        onPressHandler, userInput, setUserInput, userToDo, onDelHandler
     }
 }
 

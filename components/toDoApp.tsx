@@ -3,7 +3,7 @@ import UseToDo from "../custom hooks/useToDo"
 
 const ToDoApp = () => {
 
-    const {onPressHandler, userInput, setUserInput, userToDo} = UseToDo()
+    const {onPressHandler, userInput, setUserInput, userToDo, onDelHandler} = UseToDo()
 
    
         
@@ -16,9 +16,12 @@ const ToDoApp = () => {
                 onChangeText={text=>setUserInput(text)}/>
                 <Button onPress={onPressHandler} title="add"/> 
 
-             {userToDo.map((item)=>{
+             {userToDo.map((item, index)=>{
                 return (
-                    <Text>  {item.toDoItem} </Text>
+                    <View>
+                    <Text key={index}>  {item.toDoItem} </Text>
+                    <Button onPress={()=>onDelHandler(index)} title="Del"/> 
+                    </View>
                 )
                })} 
              
