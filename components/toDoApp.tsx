@@ -18,8 +18,8 @@ const ToDoApp = () => {
 
              {userToDo.map((item, index)=>{
                 return (
-                    <View>
-                    <Text key={index}>  {item.toDoItem} </Text>
+                    <View key={index}>
+                    <Text >  {item.toDoItem} </Text>
                     <Button onPress={()=>onDelHandler(index)} title="Del"/> 
                     </View>
                 )
